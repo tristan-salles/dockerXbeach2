@@ -18,18 +18,29 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     python-mako \
     subversion
 
-RUN cd /usr/local && \
-    svn --username tristan.salles.x.1 --password matris --trust-server-cert checkout https://svn.oss.deltares.nl/repos/xbeach/tags/2018-11-09-XBeach-v1.23.5527-XBeachX_update && \
-    mv /usr/local/2018-11-09-XBeach-v1.23.5527-XBeachX_update /usr/local/xbeach
+# Copy local directory to image
+COPY Reef3D /workspace/Reef3D
+COPY xbeach /workspace/xbeach
+COPY coral /workspace/coral
+COPY Yanchep /workspace/Yanchep
 
-RUN cd /usr/local/xbeach && \
-    chmod -R a+x /usr/local/xbeach && \
+RUN cd workspace/xbeach && \
     sh autogen.sh && \
     ./configure --with-netcdf && \
     make && \
     make install
 
-#https://svn.oss.deltares.nl/repos/xbeach/trunk && \
+# RUN cd /usr/local && \
+#     svn --username tristan.salles.x.1 --password matris --trust-server-cert checkout https://svn.oss.deltares.nl/repos/xbeach/tags/2018-11-09-XBeach-v1.23.5527-XBeachX_update && \
+#     mv /usr/local/2018-11-09-XBeach-v1.23.5527-XBeachX_update /usr/local/xbeach
+# https://svn.oss.deltares.nl/repos/xbeach/trunk && \
+# RUN cd /usr/local/xbeach && \
+#     chmod -R a+x /usr/local/xbeach && \
+#     sh autogen.sh && \
+#     ./configure --with-netcdf && \
+#     make && \
+#     make install
+
 
 # expose notebook port
 EXPOSE 8888

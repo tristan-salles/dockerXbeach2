@@ -1,0 +1,649 @@
+  **********************************************************
+                     Welcome to XBeach
+ 
+               version 1.22.5135M
+               dateSun Apr 23 01:49:46 UTC 2017
+     URL:URL: https://svn.oss.deltares.nl/repos/xbeach/trunk/src/xbeachlibrary
+  **********************************************************
+ 
+  Simulation started: YYYYMMDD    hh:mm:ss     time zone (UTC)
+                      20200521  10:21:43     +0000
+ 
+    running in:/workspace/volume/dockerXbeach2/Yanchep
+  General Input Module
+  Reading input parameters:
+  --------------------------------
+  Physical processes:
+   XBeach reading fromparams.txt
+                    cyclic =0 (no record found, default value used)
+                     swave =1 (no record found, default value used)
+                single_dir =0 (no record found, default value used)
+                     lwave =1 (no record found, default value used)
+                      flow =1 (no record found, default value used)
+                  sedtrans =1 (no record found, default value used)
+                morphology =1 (no record found, default value used)
+               avalanching =1 (no record found, default value used)
+                      nonh =0 (no record found, default value used)
+                    gwflow =0 (no record found, default value used)
+                     ships =0 (no record found, default value used)
+                vegetation =0 (no record found, default value used)
+                  setbathy =0 (no record found, default value used)
+                 viscosity =1 (no record found, default value used)
+                 advection =1 (no record found, default value used)
+                      wind =1 (no record found, default value used)
+  --------------------------------
+  Grid parameters:
+                  gridform =delft3d
+                   depfile =bed.dep
+                    xyfile =xy.grd
+                      xori =.0000 (no record found, default value used)
+                      yori =.0000 (no record found, default value used)
+                      alfa =26.0000
+                    posdwn =1.0000
+                        nz =1 (no record found, default value used)
+                  thetamin =-80.0000
+                  thetamax =80.0000
+                 thetanaut =0 (no record found, default value used)
+                    dtheta =20.0000
+  --------------------------------
+  Model time parameters:
+                       CFL =.7000 (no record found, default value used)
+                     dtset =.0000 (no record found, default value used)
+                     tstop =16200.0000
+                  maxdtfac =50.0000 (no record found, default value used)
+  --------------------------------
+  Physical constants:
+                       rho =1025.0000 (no record found, default value used)
+                         g =9.8100 (no record found, default value used)
+                depthscale =1.0000 (no record found, default value used)
+  --------------------------------
+  Initial conditions:
+                zsinitfile = None specified
+  --------------------------------
+  Wave boundary condition parameters:
+                    instat =jons
+                    bcfile =jonswap.txt
+                     taper =100.0000 (no record found, default value used)
+                      nmax =.8000 (no record found, default value used)
+               lateralwave =neumann (no record found, default value used)
+  --------------------------------
+  Wave-spectrum boundary condition parameters:
+              nonhspectrum =0 (no record found, default value used)
+                    random =0
+                   fcutoff =.0000 (no record found, default value used)
+                   trepfac =.0100 (no record found, default value used)
+                   sprdthr =.0800 (no record found, default value used)
+                Tm01switch =0 (no record found, default value used)
+                        rt =16200.0000 Warning: value > recommended value of7200.0000
+                      dtbc =1.0000
+              nspectrumloc =1 (no record found, default value used)
+  --------------------------------
+  Flow boundary condition parameters:
+                     front =abs_2d
+                      left =neumann (no record found, default value used)
+                     right =neumann (no record found, default value used)
+                      back =abs_2d
+                       ARC =1 (no record found, default value used)
+                     order =2.0000 (no record found, default value used)
+                   carspan =0 (no record found, default value used)
+                  freewave =0 (no record found, default value used)
+                      epsi =-1.0000 (no record found, default value used)
+                  tidetype =velocity (no record found, default value used)
+  --------------------------------
+  Tide boundary conditions:
+                   tideloc =2
+                paulrevere =land (no record found, default value used)
+                   zs0file =tide.txt
+  --------------------------------
+  Discharge boundary conditions:
+            disch_loc_file = None specified
+     disch_timeseries_file = None specified
+                ndischarge =0 (no record found, default value used)
+               ntdischarge =0 (no record found, default value used)
+                      beta =.1000 (no record found, default value used)
+  --------------------------------
+  Wave breaking parameters:
+                     break =roelvink2 (no record found, default value used)
+                     gamma =.5500 (no record found, default value used)
+                     alpha =1.0000 (no record found, default value used)
+                         n =10.0000 (no record found, default value used)
+                    gammax =2.0000 (no record found, default value used)
+                     delta =.0000 (no record found, default value used)
+                        fw =.0300
+                    fwfile = None specified
+                  fwcutoff =1000.0000 (no record found, default value used)
+              breakerdelay =1.0000 (no record found, default value used)
+  --------------------------------
+  Roller parameters:
+                    roller =1 (no record found, default value used)
+                       rfb =0 (no record found, default value used)
+  --------------------------------
+  Wave-current interaction parameters:
+                       wci =0
+                      hwci =.1000 (no record found, default value used)
+                   hwcimax =100.0000 (no record found, default value used)
+                      cats =4.0000 (no record found, default value used)
+  --------------------------------
+  Flow parameters:
+               bedfriction =chezy (no record found, default value used)
+                         C =55.0000
+  Warning: Specification of bed friction using parameter 'C' will not be supported in future versions of XBeach
+ Use parameters 'bedfriction' and 'bedfriccoef' instead
+                       nuh =.1000 (no record found, default value used)
+                    nuhfac =1.0000 (no record found, default value used)
+                      smag =1 (no record found, default value used)
+  --------------------------------
+  Coriolis force parameters:
+                    wearth =.0417 (no record found, default value used)
+                       lat =.0000 (no record found, default value used)
+  --------------------------------
+  Wind parameters:
+                      rhoa =1.2500 (no record found, default value used)
+                        Cd =.0020 (no record found, default value used)
+                  windfile = None specified
+                     windv =.0000 (no record found, default value used)
+                    windth =270.0000 (no record found, default value used)
+  --------------------------------
+  Sediment transport parameters:
+                      form =vanthiel_vanrijn (no record found, default value used)
+                  waveform =vanthiel (no record found, default value used)
+                       sws =1 (no record found, default value used)
+                       lws =1 (no record found, default value used)
+                     BRfac =1.0000 (no record found, default value used)
+                     facsl =1.6000 (no record found, default value used)
+                        z0 =.0060 (no record found, default value used)
+                      smax =-1.0000 (no record found, default value used)
+                     tsfac =.1000 (no record found, default value used)
+                     facua =.1000 (no record found, default value used)
+                     facSk =.1000 (no record found, default value used)
+                     facAs =.1000 (no record found, default value used)
+                   turbadv =none (no record found, default value used)
+                      turb =bore_averaged (no record found, default value used)
+                     Tbfac =1.0000 (no record found, default value used)
+                     Tsmin =.5000 (no record found, default value used)
+                       lwt =0 (no record found, default value used)
+                     betad =1.0000 (no record found, default value used)
+                       sus =1 (no record found, default value used)
+                       bed =1 (no record found, default value used)
+                      bulk =0 (no record found, default value used)
+                     facDc =1.0000 (no record found, default value used)
+                fallvelred =0 (no record found, default value used)
+                 dilatancy =0 (no record found, default value used)
+               reposeangle =30.0000 (no record found, default value used)
+               bdslpeffmag =roelvink_total (no record found, default value used)
+               bdslpeffini =none (no record found, default value used)
+               bdslpeffdir =none (no record found, default value used)
+  --------------------------------
+  Bed composition parameters:
+                       ngd =1 (no record found, default value used)
+                        nd =3 (no record found, default value used)
+                       por =.4000 (no record found, default value used)
+                       D50 =.0004
+                       D90 =.0005
+                      rhos =2650.0000 (no record found, default value used)
+                       dzg =.1000 (no record found, default value used)
+                      dzg1 =.1000 (no record found, default value used)
+                      dzg2 =.1000 (no record found, default value used)
+                      dzg3 =.1000 (no record found, default value used)
+   sedcal =1.0000 (no record found, default value used)
+   ucrcal =1.0000 (no record found, default value used)
+  --------------------------------
+  Morphology parameters:
+                    morfac =10.0000
+                 morfacopt =1 (no record found, default value used)
+                  morstart =120.0000 (no record found, default value used)
+                   morstop =16200.0000 (no record found, default value used)
+                    wetslp =.1500
+                    dryslp =1.0000
+                    lsgrad =.0000 (no record found, default value used)
+                   hswitch =.1000 (no record found, default value used)
+                     dzmax =.0500 (no record found, default value used)
+                    struct =1
+                  ne_layer =reef.dep
+  --------------------------------
+  Output variables:
+                   timings =1 (no record found, default value used)
+                    tunits = None specified
+                    tstart =.0000
+                      tint =1.0000 (no record found, default value used)
+                  tsglobal = None specified
+                     tintg =120.0000
+                  tspoints = None specified
+                     tintp =1.0000 (no record found, default value used)
+                    tsmean = None specified
+                     tintm =16200.0000
+                nglobalvar =13
+   nglobalvar: Will generate global output for variable:zb
+   nglobalvar: Will generate global output for variable:zs
+   nglobalvar: Will generate global output for variable:u
+   nglobalvar: Will generate global output for variable:v
+   nglobalvar: Will generate global output for variable:H
+   nglobalvar: Will generate global output for variable:Fx
+   nglobalvar: Will generate global output for variable:Fy
+   nglobalvar: Will generate global output for variable:ceqsg
+   nglobalvar: Will generate global output for variable:ccg
+   nglobalvar: Will generate global output for variable:Susg
+   nglobalvar: Will generate global output for variable:Svsg
+   nglobalvar: Will generate global output for variable:sedero
+   nglobalvar: Will generate global output for variable:dzav
+                   npoints =0 (no record found, default value used)
+                  nrugauge =0 (no record found, default value used)
+                 npointvar =0 (no record found, default value used)
+                 nrugdepth =1 (no record found, default value used)
+   rugdepth =.0000 (no record found, default value used)
+                  nmeanvar =8
+   nmeanvar: Will generate mean, min, max and variance output for variable:zs
+   nmeanvar: Will generate mean, min, max and variance output for variable:u
+   nmeanvar: Will generate mean, min, max and variance output for variable:v
+   nmeanvar: Will generate mean, min, max and variance output for variable:H
+   nmeanvar: Will generate mean, min, max and variance output for variable:ceqsg
+   nmeanvar: Will generate mean, min, max and variance output for variable:ccg
+   nmeanvar: Will generate mean, min, max and variance output for variable:Susg
+   nmeanvar: Will generate mean, min, max and variance output for variable:Svsg
+              outputformat =netcdf
+           outputprecision =double (no record found, default value used)
+                ncfilename = None specified
+  netcdf output to:xboutput.nc
+  --------------------------------
+  Output projection:
+                projection = None specified
+                    rotate =1 (no record found, default value used)
+  --------------------------------
+  Wave numerics parameters:
+                    scheme =upwind_2 (no record found, default value used)
+                    snells =0 (no record found, default value used)
+  --------------------------------
+  Flow numerics parameters:
+                       eps =.0050 (no record found, default value used)
+                    eps_sd =.5000 (no record found, default value used)
+                      umin =.0000 (no record found, default value used)
+                      hmin =.2000 (no record found, default value used)
+                  secorder =0 (no record found, default value used)
+  --------------------------------
+  Sediment transport numerics parameters:
+                  thetanum =1.0000 (no record found, default value used)
+                sourcesink =0 (no record found, default value used)
+                      cmax =.1000 (no record found, default value used)
+  --------------------------------
+  Bed update numerics parameters:
+                   frac_dz =.7000 (no record found, default value used)
+                    nd_var =2 (no record found, default value used)
+                     split =1.0100 (no record found, default value used)
+                     merge =.0100 (no record found, default value used)
+  --------------------------------
+  Finished reading input parameters
+  --------------------------------
+  ------------------------------------
+  Building Grid and Bathymetry
+  ------------------------------------
+  Initializing .....
+   readtide: reading tide time series fromtide.txt ...
+  --------------------------------
+  Initializing spectral wave boundary conditions
+  --------------------------------
+  NetCDF outputformat
+   Creating netcdf variable:zb
+   Creating netcdf variable:zs
+   Creating netcdf variable:u
+   Creating netcdf variable:v
+   Creating netcdf variable:H
+   Creating netcdf variable:Fx
+   Creating netcdf variable:Fy
+   Creating netcdf variable:ceqsg
+   Creating netcdf variable:ccg
+   Creating netcdf variable:Susg
+   Creating netcdf variable:Svsg
+   Creating netcdf variable:sedero
+   Creating netcdf variable:dzav
+   Creating netcdf variable:zs_mean
+   Creating netcdf variable:zs_var
+   Creating netcdf variable:zs_min
+   Creating netcdf variable:zs_max
+   Creating netcdf variable:u_mean
+   Creating netcdf variable:u_var
+   Creating netcdf variable:u_min
+   Creating netcdf variable:u_max
+   Creating netcdf variable:v_mean
+   Creating netcdf variable:v_var
+   Creating netcdf variable:v_min
+   Creating netcdf variable:v_max
+   Creating netcdf variable:H_mean
+   Creating netcdf variable:H_var
+   Creating netcdf variable:H_min
+   Creating netcdf variable:H_max
+   Creating netcdf variable:ceqsg_mean
+   Creating netcdf variable:ceqsg_var
+   Creating netcdf variable:ceqsg_min
+   Creating netcdf variable:ceqsg_max
+   Creating netcdf variable:ccg_mean
+   Creating netcdf variable:ccg_var
+   Creating netcdf variable:ccg_min
+   Creating netcdf variable:ccg_max
+   Creating netcdf variable:Susg_mean
+   Creating netcdf variable:Susg_var
+   Creating netcdf variable:Susg_min
+   Creating netcdf variable:Susg_max
+   Creating netcdf variable:Svsg_mean
+   Creating netcdf variable:Svsg_var
+   Creating netcdf variable:Svsg_min
+   Creating netcdf variable:Svsg_max
+  Writing file definition.
+  Setting up boundary conditions
+  --------------------------------
+  Calculating spectral wave boundary conditions
+  --------------------------------
+  Reading spectrum at location1
+   waveparams: Reading fromjonswap.txt ...
+   XBeach reading fromjonswap.txt
+                    nmodal =1 (no record found, default value used)
+                       Hm0 =4.0000
+                        fp =.0667
+                  gammajsp =3.3000
+                         s =20.0000
+   tma =0 (no record found, default value used)
+                   mainang =220.0000
+                      fnyq =1.0000
+                       dfj =.0050 (no record found, default value used)
+  Interpreting spectrum at location1
+  Values calculated from interpolated spectrum:
+  Hm0       =4.00 m
+  Trep      =13.72 s
+  Mean dir  =220.43 degN
+  Overall Trep from all spectra calculated:13.72 s
+  Calculating Fourier components
+  5.0% done
+  10.0% done
+  15.0% done
+  20.0% done
+  25.0% done
+  30.0% done
+  35.0% done
+  40.0% done
+  45.0% done
+  50.0% done
+  55.0% done
+  60.0% done
+  65.0% done
+  70.0% done
+  75.0% done
+  80.0% done
+  85.0% done
+  90.0% done
+  95.0% done
+  100.0% done
+  Wave energy outside computational domain at offshore boundary:.0%
+  Calculating short wave time series for theta bin1 of8
+  Calculating short wave time series for theta bin2 of8
+  Calculating short wave time series for theta bin3 of8
+  Calculating short wave time series for theta bin4 of8
+  Calculating short wave time series for theta bin5 of8
+  Calculating short wave time series for theta bin6 of8
+  Calculating short wave time series for theta bin7 of8
+  Calculating short wave time series for theta bin8 of8
+  Y-point1 of137 done.
+  Y-point2 of137 done.
+  Y-point3 of137 done.
+  Y-point4 of137 done.
+  Y-point5 of137 done.
+  Y-point6 of137 done.
+  Y-point7 of137 done.
+  Y-point8 of137 done.
+  Y-point9 of137 done.
+  Y-point10 of137 done.
+  Y-point11 of137 done.
+  Y-point12 of137 done.
+  Y-point13 of137 done.
+  Y-point14 of137 done.
+  Y-point15 of137 done.
+  Y-point16 of137 done.
+  Y-point17 of137 done.
+  Y-point18 of137 done.
+  Y-point19 of137 done.
+  Y-point20 of137 done.
+  Y-point21 of137 done.
+  Y-point22 of137 done.
+  Y-point23 of137 done.
+  Y-point24 of137 done.
+  Y-point25 of137 done.
+  Y-point26 of137 done.
+  Y-point27 of137 done.
+  Y-point28 of137 done.
+  Y-point29 of137 done.
+  Y-point30 of137 done.
+  Y-point31 of137 done.
+  Y-point32 of137 done.
+  Y-point33 of137 done.
+  Y-point34 of137 done.
+  Y-point35 of137 done.
+  Y-point36 of137 done.
+  Y-point37 of137 done.
+  Y-point38 of137 done.
+  Y-point39 of137 done.
+  Y-point40 of137 done.
+  Y-point41 of137 done.
+  Y-point42 of137 done.
+  Y-point43 of137 done.
+  Y-point44 of137 done.
+  Y-point45 of137 done.
+  Y-point46 of137 done.
+  Y-point47 of137 done.
+  Y-point48 of137 done.
+  Y-point49 of137 done.
+  Y-point50 of137 done.
+  Y-point51 of137 done.
+  Y-point52 of137 done.
+  Y-point53 of137 done.
+  Y-point54 of137 done.
+  Y-point55 of137 done.
+  Y-point56 of137 done.
+  Y-point57 of137 done.
+  Y-point58 of137 done.
+  Y-point59 of137 done.
+  Y-point60 of137 done.
+  Y-point61 of137 done.
+  Y-point62 of137 done.
+  Y-point63 of137 done.
+  Y-point64 of137 done.
+  Y-point65 of137 done.
+  Y-point66 of137 done.
+  Y-point67 of137 done.
+  Y-point68 of137 done.
+  Y-point69 of137 done.
+  Y-point70 of137 done.
+  Y-point71 of137 done.
+  Y-point72 of137 done.
+  Y-point73 of137 done.
+  Y-point74 of137 done.
+  Y-point75 of137 done.
+  Y-point76 of137 done.
+  Y-point77 of137 done.
+  Y-point78 of137 done.
+  Y-point79 of137 done.
+  Y-point80 of137 done.
+  Y-point81 of137 done.
+  Y-point82 of137 done.
+  Y-point83 of137 done.
+  Y-point84 of137 done.
+  Y-point85 of137 done.
+  Y-point86 of137 done.
+  Y-point87 of137 done.
+  Y-point88 of137 done.
+  Y-point89 of137 done.
+  Y-point90 of137 done.
+  Y-point91 of137 done.
+  Y-point92 of137 done.
+  Y-point93 of137 done.
+  Y-point94 of137 done.
+  Y-point95 of137 done.
+  Y-point96 of137 done.
+  Y-point97 of137 done.
+  Y-point98 of137 done.
+  Y-point99 of137 done.
+  Y-point100 of137 done.
+  Y-point101 of137 done.
+  Y-point102 of137 done.
+  Y-point103 of137 done.
+  Y-point104 of137 done.
+  Y-point105 of137 done.
+  Y-point106 of137 done.
+  Y-point107 of137 done.
+  Y-point108 of137 done.
+  Y-point109 of137 done.
+  Y-point110 of137 done.
+  Y-point111 of137 done.
+  Y-point112 of137 done.
+  Y-point113 of137 done.
+  Y-point114 of137 done.
+  Y-point115 of137 done.
+  Y-point116 of137 done.
+  Y-point117 of137 done.
+  Y-point118 of137 done.
+  Y-point119 of137 done.
+  Y-point120 of137 done.
+  Y-point121 of137 done.
+  Y-point122 of137 done.
+  Y-point123 of137 done.
+  Y-point124 of137 done.
+  Y-point125 of137 done.
+  Y-point126 of137 done.
+  Y-point127 of137 done.
+  Y-point128 of137 done.
+  Y-point129 of137 done.
+  Y-point130 of137 done.
+  Y-point131 of137 done.
+  Y-point132 of137 done.
+  Y-point133 of137 done.
+  Y-point134 of137 done.
+  Y-point135 of137 done.
+  Y-point136 of137 done.
+  Y-point137 of137 done.
+  Wave bin1 contains.00% of total energy
+  Wave bin2 contains.00% of total energy
+  Wave bin3 contains.83% of total energy
+  Wave bin4 contains9.19% of total energy
+  Wave bin5 contains34.11% of total energy
+  Wave bin6 contains35.20% of total energy
+  Wave bin7 contains19.03% of total energy
+  Wave bin8 contains1.63% of total energy
+   Writing wave energy toE_reuse.bcf ...
+  file done
+  Calculating primary wave interaction
+  5.0% done
+  10.1% done
+  15.1% done
+  20.1% done
+  25.1% done
+  30.2% done
+  35.2% done
+  40.2% done
+  45.2% done
+  50.3% done
+  55.3% done
+  60.3% done
+  65.3% done
+  70.4% done
+  75.4% done
+  80.4% done
+  85.4% done
+  90.5% done
+  95.5% done
+  100.0% done
+  Warning: shallow water so long wave variance is reduced using par%nmax
+  Calculating flux at boundary
+  Flux1 of137
+  Flux2 of137
+  Flux3 of137
+  Flux4 of137
+  Flux5 of137
+  Flux6 of137
+  Flux7 of137
+  Flux8 of137
+  Flux9 of137
+  Flux10 of137
+  Flux11 of137
+  Flux12 of137
+  Flux13 of137
+  Flux14 of137
+  Flux15 of137
+  Flux16 of137
+  Flux17 of137
+  Flux18 of137
+  Flux19 of137
+  Flux20 of137
+  Flux21 of137
+  Flux22 of137
+  Flux23 of137
+  Flux24 of137
+  Flux25 of137
+  Flux26 of137
+  Flux27 of137
+  Flux28 of137
+  Flux29 of137
+  Flux30 of137
+  Flux31 of137
+  Flux32 of137
+  Flux33 of137
+  Flux34 of137
+  Flux35 of137
+  Flux36 of137
+  Flux37 of137
+  Flux38 of137
+  Flux39 of137
+  Flux40 of137
+  Flux41 of137
+  Flux42 of137
+  Flux43 of137
+  Flux44 of137
+  Flux45 of137
+  Flux46 of137
+  Flux47 of137
+  Flux48 of137
+  Flux49 of137
+  Flux50 of137
+  Flux51 of137
+  Flux52 of137
+  Flux53 of137
+  Flux54 of137
+  Flux55 of137
+  Flux56 of137
+  Flux57 of137
+  Flux58 of137
+  Flux59 of137
+  Flux60 of137
+  Flux61 of137
+  Flux62 of137
+  Flux63 of137
+  Flux64 of137
+  Flux65 of137
+  Flux66 of137
+  Flux67 of137
+  Flux68 of137
+  Flux69 of137
+  Flux70 of137
+  Flux71 of137
+  Flux72 of137
+  Flux73 of137
+  Flux74 of137
+  Flux75 of137
+  Flux76 of137
+  Flux77 of137
+  Flux78 of137
+  Flux79 of137
+  Flux80 of137
+  Flux81 of137
+  Flux82 of137
+  Flux83 of137
+  Flux84 of137
+  Flux85 of137
+  Flux86 of137
+  Flux87 of137
+  Flux88 of137
+  Flux89 of137
+  Flux90 of137
+  Flux91 of137
+  Flux92 of137
+  Flux93 of137
+  Flux94 of137
+  Flux95 of137
+  Flux96 of137
+  Flux97 of137
